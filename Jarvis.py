@@ -42,7 +42,7 @@ def greet_user() -> None:
         speak(f"Good evening {USERNAME}")
     speak(f"I am {BOTNAME}. How may I assist you?")
 
-def take_user_input() -> str:
+def listen() -> str:
     """Takes user input, recognizes it using Speech Recognition module and converts it into text"""
     #TODO: add variation of responses
     r = sr.Recognizer()
@@ -73,7 +73,7 @@ def main():
     speak("Initiating...")
     greet_user()
     while True:
-        take_user_input()
+        listen()
 
 if __name__ == '__main__':
     main()
