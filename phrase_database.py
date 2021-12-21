@@ -8,6 +8,7 @@ performing_task = [
     "moving Mount Everest",
     "engaging the Death Star",
     "attempting to contact the Dark Side",
+    "making magic happen",
     "attempting",
     "starting",
     "launching",
