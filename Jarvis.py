@@ -42,3 +42,30 @@ def greet_user() -> None:
         speak(f"Good evening {USERNAME}")
     speak(f"I am {BOTNAME}. How may I assist you?")
 
+def take_user_input() -> str:
+    """Takes user input, recognizes it using Speech Recognition module and converts it into text"""
+    #TODO: add variation of responses
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print('Listening....')
+        r.pause_threshold = 1
+        audio = r.listen(source)
+
+    try:
+        print('Recognizing...')
+        query = r.recognize_google(audio, language='en-us')
+        if not 'exit' in query or 'stop' in query or 'quit' in query:
+            speak(query)
+            speak(choice(performing_task))
+        else:
+            hour = datetime.now().hour
+            if hour >= 21 and hour < 6:
+                speak("Good night sir, take care!")
+            else:
+                speak('Have a good day sir!')
+            exit()
+    except Exception:
+        speak('Sorry, I could not understand. Could you please say that again?')
+        query = 'None'
+    return query
+
