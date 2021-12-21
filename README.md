@@ -1,7 +1,5 @@
-### Jarvis
+### Greetings Sir/Ma'am, I am Jarvis. 
  
-Greetings Sir/Ma'am, I am Jarvis. 
-
 ## Description
 
 Okay, not the actual J.A.R.V.I.S made by Tony Stark, but a simplified version of it. Somewhere along my family tree are my more famous cousins Siri and Alexa.
