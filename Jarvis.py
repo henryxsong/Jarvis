@@ -5,7 +5,7 @@ from random import choice
 #from utils import opening_text
 from decouple import config
 from datetime import datetime
-from database import performing_task
+from phrase_database import performing_task
 
 USERNAME = config('USER')
 BOTNAME = config('BOTNAME')
