@@ -15,6 +15,7 @@ It is designed to act as a voice assistant on your computer, capable of performi
 - [ ] Perform non-intrusive tasks on local machine (i.e. open application, play music, etc)
 - [ ] Expand database of phrases
 - [ ] Implement Docker (? tbd)
+- [ ] Implement a front-end interface (i.e. a synthesizer like hal in 2001: A space odyssey)
 - [ ] Obtain the mind stone to make Jarvis sentient
 
 ## Privacy
