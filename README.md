@@ -6,7 +6,7 @@ Okay, not the actual J.A.R.V.I.S made by Tony Stark, but a simplified version of
 
 As huge fan of the MCU, I drew inspiration from Tony Stark's arsenal of technology. While I may not have the ability to build a functional Iron Man suit (yet), it is within my skillset to build Jarvis, ableit an extremely simplified version. Unfortunately, I cannot change nuclear launch codes as seen in Avengers: Rise of Ultron.
 
-It is designed to act as a voice assistant on your computer, capable of performing simple tasks. Current planned capabilities are found below in the ToDo section, but more may be added in the future.
+It is designed to act as a voice assistant on your computer, capable of performing simple tasks. Current planned capabilities are found below in the ToDo section, but more may be added in the future. 
 
 ## ToDo
 - [x] Create speech engine
