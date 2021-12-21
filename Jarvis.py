@@ -1,14 +1,18 @@
 #class Engine(object):
 import pyttsx3
+import speech_recognition as sr
+from random import choice
+#from utils import opening_text
 from decouple import config
 from datetime import datetime
+from database import performing_task
 
 USERNAME = config('USER')
 BOTNAME = config('BOTNAME')
 
 engine = pyttsx3.init()
 
-engine.setProperty('rate', 190)
+engine.setProperty('rate', 200)
 engine.setProperty('volume', 1)
 
 voices = engine.getProperty('voices')
@@ -38,4 +42,3 @@ def greet_user() -> None:
         speak(f"Good evening {USERNAME}")
     speak(f"I am {BOTNAME}. How may I assist you?")
 
-greet_user()
