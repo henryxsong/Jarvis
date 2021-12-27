@@ -1,4 +1,4 @@
-import os
+from os import startfile
 import subprocess as sp
 from directory import app_paths
 
@@ -13,7 +13,7 @@ class Operations(object):
         """
         for app in app_paths:
             if app_name in app:
-                os.startfile(app_paths[app])
+                startfile(app_paths[app])
                 break
         else:
             print(f"{app_name} not found")
