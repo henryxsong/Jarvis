@@ -18,5 +18,9 @@ It is designed to act as a voice assistant on your computer, capable of performi
 - [ ] Implement a front-end interface (i.e. a synthesizer like hal in 2001: A space odyssey)
 - [ ] Obtain the mind stone to make Jarvis sentient
 
+
+## Compatibility
+Currently designed and tested for MacOS (12.1) using Python3 (3.9.1).
+
 ## Privacy
 This program, by default, will utilize your computer's microphone and will listen to audio picked up by your system's micophone. In the script that I have written, no part of the program stores/logs/sends recordings with one exception. Only the latest voice command will be stored in a variable as a string of text to be parsed and run, but once a new command is given, the old command will be overwritten. This utilizes the python packages pyttsx3 and speech_recognition, which to my knowledge, does not store/log data. Feel free to browse the source code to verify :)
