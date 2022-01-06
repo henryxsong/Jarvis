@@ -29,18 +29,15 @@ class Directory(object):
             full_path = os.path.join(dir, path)
             temp = COMMAND + [full_path]
             self.add_app_path(self.parse_app_name(path), temp)
-        print(self.app_paths)
+        #print(self.app_paths)
 
-    @staticmethod
-    def get_app_paths() -> list:
+    
+    def get_app_paths(self) -> list:
         """
         Returns all app paths
         """
-        return Directory.app_paths
+        return self.app_paths
 
 
-
-    
-
-
-print(Directory())
+# TESTING PURPOSES
+#print(Directory().get_app_paths())
