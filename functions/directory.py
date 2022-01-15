@@ -25,11 +25,22 @@ class Directory(object):
     
     def initialize(self) -> None:
         dir = "/Applications/"
+
         for path in os.listdir(dir):
+            if path.startswith("."):
+                continue
+            # #print(path)
+            # if path[-4:] != ".app":
+            #     for sub_path in os.listdir(dir + path):
+            #         if sub_path.startswith("."):
+            #             continue
+            #         if sub_path[-4:] == ".app":
+            #             self.add_app_path(self.parse_app_name(sub_path), COMMAND + [dir + path + "/" + sub_path])
+            # else:
             full_path = os.path.join(dir, path)
-            temp = COMMAND + [full_path]
-            self.add_app_path(self.parse_app_name(path), temp)
-        #print(self.app_paths)
+
+            self.add_app_path(self.parse_app_name(path), COMMAND + [full_path])
+        print(self.app_paths)
 
     
     def get_app_paths(self) -> list:
@@ -40,4 +51,7 @@ class Directory(object):
 
 
 # TESTING PURPOSES
-#print(Directory().get_app_paths())
+for app in Directory().get_app_paths():
+    print(app)
+print(len(Directory().get_app_paths()))
+#Directory()
