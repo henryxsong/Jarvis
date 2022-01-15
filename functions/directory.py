@@ -1,4 +1,3 @@
-#TODO: Create function to return all app paths into dictionary structure
 import os
 
 COMMAND = ["/usr/bin/open", "-n", "-a"]
