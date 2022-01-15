@@ -51,7 +51,7 @@ class Directory(object):
 
 
 # TESTING PURPOSES
-for app in Directory().get_app_paths():
-    print(app)
-print(len(Directory().get_app_paths()))
+# for app in Directory().get_app_paths():
+#     print(app)
+# print(len(Directory().get_app_paths()))
 #Directory()
