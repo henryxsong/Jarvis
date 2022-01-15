@@ -23,6 +23,7 @@ class Directory(object):
         self.app_paths.append({app_name: app_path})
     
     def initialize(self) -> None:
+        # TODO: Add support for subdirectories (i.e. apps in /Applications/Utilities)
         dir = "/Applications/"
 
         for path in os.listdir(dir):
