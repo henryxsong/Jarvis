@@ -73,12 +73,12 @@ class Engine(object):
 
 
 
-def main():
-    jarvis = Engine()
-    jarvis.speak("Initiating...")
-    jarvis.greet_user()
-    while True:
-        jarvis.listen()
+# def main():
+#     jarvis = Engine()
+#     jarvis.speak("Initiating...")
+#     jarvis.greet_user()
+#     while True:
+#         jarvis.listen()
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
