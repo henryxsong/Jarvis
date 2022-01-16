@@ -7,7 +7,6 @@ class Jarvis(object):
         self.run()
     
     def run(self):
-        self.jarvis.speak("Initiating...")
         self.jarvis.greet_user()
         while True:
             self.jarvis.listen()
