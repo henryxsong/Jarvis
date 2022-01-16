@@ -3,7 +3,7 @@ import subprocess as sp
 import time
 
 import psutil
-from directory import Directory
+from functions.directory import Directory
 
 class Operations(object):
     def __init__(self) -> None:
