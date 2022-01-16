@@ -25,3 +25,9 @@ def google_it(query:str):
     """
     kit.search(query, option="web")
 
+def youtube_it(query:str):
+    """
+    Searches YouTube for a query and returns the first result
+    """
+    kit.playonyt(query)
+
