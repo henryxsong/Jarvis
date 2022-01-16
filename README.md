@@ -16,12 +16,29 @@ It is designed to act as a voice assistant on your computer, capable of performi
 
 2. Navigate to the root directory of the repo
 
-3. Install dependencies
+3. Create a new virtual environment
+```
+    python -m venv env
+    env/Scripts/activate
+```
+
+4. Generate relevant API keys:
+    * Weather (Free): https://openweathermap.org/price
+    * News (Free): https://newsapi.org/
+
+5. Populate the virtual environment with personalized fields:
+```
+    USER=YOUR_NAME_HERE
+    BOTNAME=JARVIS
+    WEATHER_API_KEY=YOUR_KEY_HERE
+    NEWS_API_KEY=YOUR_KEY_HERE
+
+6. Install dependencies
 ```
     pip install -r requirements.txt
 ```
 
-4. Run program
+7. Run program
 ```
     python3 Jarvis.py
 ```
