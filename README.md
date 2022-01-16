@@ -1,7 +1,7 @@
-# Greetings Sir/Ma'am, I am Jarvis. 
-<iframe src="https://giphy.com/embed/E4WGN3BXJcAM1axxAe" width="480" height="105" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/sunniesstudios-sunnies-studios-sunniesspecs-E4WGN3BXJcAM1axxAe">via GIPHY</a></p>
-![Alt Text](https://media2.giphy.com/media/E4WGN3BXJcAM1axxAe/giphy.gif)
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+# Greetings Sir/Ma'am, I am ...
+ <p align="center">
+    <img src="https://media2.giphy.com/media/E4WGN3BXJcAM1axxAe/giphy.gif" alt="logo">
+ </p>
  
 ## Description
 
