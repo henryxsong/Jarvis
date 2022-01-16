@@ -94,6 +94,10 @@ class Engine(object):
                     search_args = ' '.join(arg)
                     self.speak(f"Here is what I found for {search_args}")
                     self.speak(google_it(search_args))
+                elif 'joke' in query:
+                    print('Getting joke')
+                    self.speak(get_joke())
+                
                 
             else:
                 hour = datetime.now().hour
