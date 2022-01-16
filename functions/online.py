@@ -7,11 +7,12 @@ import pywhatkit as kit
 
 from decouple import config
 
-def get_ip():
+def get_ip() -> str:
     """
     Returns the current IP address
     """
-    return requests.get("https://api.ipify.org").json()["ip"]
+    result = requests.get("https://api.ipify.org").text
+    return result
 
 def wiki_lookup(query:str) -> str:
     """
@@ -19,13 +20,13 @@ def wiki_lookup(query:str) -> str:
     """
     return wikipedia.summary(query, sentences=3)
 
-def google_it(query:str):
+def google_it(query:str) -> None:
     """
     Searches Google for a query and returns the first result
     """
     kit.search(query)
 
-def youtube_it(query:str):
+def youtube_it(query:str) -> None:
     """
     Searches YouTube for a query and returns the first result
     """
@@ -48,8 +49,12 @@ def get_joke() -> str:
     result = requests.get("https://icanhazdadjoke.com/", headers={'Accept': 'application/json'}).json()
     return result["joke"]
 
+def get_advice() -> str:
+    """
+    Returns a random advice from the Advice API
+    """
+    result = requests.get("https://api.adviceslip.com/advice").json()
+    return result["slip"]["advice"]
 
-google_it("google")
-print(get_joke())
-youtube_it("rick roll")
-print(get_ip())
+
+print(get_advice())
