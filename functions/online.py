@@ -55,6 +55,3 @@ def get_advice() -> str:
     """
     result = requests.get("https://api.adviceslip.com/advice").json()
     return result["slip"]["advice"]
-
-
-print(get_advice())
