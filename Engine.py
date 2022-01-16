@@ -97,7 +97,9 @@ class Engine(object):
                 elif 'joke' in query:
                     print('Getting joke')
                     self.speak(get_joke())
-                
+                elif 'news' in query:
+                    print('Getting national news')
+                    self.speak(get_national_news())
                 
             else:
                 hour = datetime.now().hour
