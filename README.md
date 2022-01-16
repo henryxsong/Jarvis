@@ -8,15 +8,41 @@ As huge fan of the MCU, I drew inspiration from Tony Stark's arsenal of technolo
 
 It is designed to act as a voice assistant on your computer, capable of performing simple tasks. Current planned capabilities are found below in the ToDo section, but more may be added in the future.  
 
+## Usage
+1. Clone the repo
+```
+    git clone https://github.com/henryxsong/Jarvis.git
+```
+
+2. Navigate to the root directory of the repo
+
+3. Install dependencies
+```
+    pip install -r requirements.txt
+```
+
+4. Run program
+```
+    python3 Jarvis.py
+```
+
 ## ToDo
 - [x] Create speech engine
 - [x] Create listener to listen to user voice commands
-- [ ] Perform simple information retrieval tasks (i.e. weather, time, location, etc)
+- [x] Perform simple information retrieval tasks (i.e. weather, time, location, etc)
 - [ ] Perform non-intrusive tasks on local machine (i.e. open application, play music, etc)
 - [ ] Expand database of phrases
 - [ ] Implement Docker (? tbd)
 - [ ] Implement a front-end interface (i.e. a synthesizer like hal in 2001: A space odyssey)
 - [ ] Obtain the mind stone to make Jarvis sentient
+
+## Dependencies
+- Python 3+
+- PyAudio
+- pyttsx3
+- pywhatkit
+- wikipedia
+- requests
 
 
 ## Compatibility
