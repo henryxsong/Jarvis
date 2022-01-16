@@ -43,3 +43,7 @@ def get_weather(query:str) -> str:
     print(condition, temp)
     return f"The weather in {query} is {condition} with a temperature of {temp} degrees Ferenheit."
 
+
+print(get_weather("Seattle"))
+youtube_it("rick roll")
+print(get_ip())
