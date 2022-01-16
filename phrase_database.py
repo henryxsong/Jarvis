@@ -13,3 +13,13 @@ performing_task = [
     "starting",
     "launching",
 ]
+
+search_phrases = [
+    "search",
+    "look up",
+    "find",
+    "search for",
+    "find out",
+    "find out about",
+    "what is"
+]
