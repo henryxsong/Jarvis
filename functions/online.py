@@ -42,6 +42,18 @@ def get_weather(query:str) -> str:
     temp = result["main"]["temp"]
     return f"The weather in {query} is {condition} with a temperature of {temp} degrees Ferenheit."
 
+def get_national_news() -> str:
+    """
+    Returns the top headlines from the BBC News API
+    """
+    NEWS_API_KEY = config('NEWS_API_KEY')
+    result = requests.get(f"https://newsapi.org/v2/top-headlines?country=us&apiKey={NEWS_API_KEY}").json()
+    articles = result["articles"]
+    news = ""
+    for article in articles:
+        news += f"{article['title']}\n"
+    return news
+
 def get_joke() -> str:
     """
     Returns a random joke from the Chuck Norris API
