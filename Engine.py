@@ -79,6 +79,9 @@ class Engine(object):
                 elif 'what time is it' in query:
                     print('Saying current time')
                     self.speak(f"It is {datetime.now().strftime('%H:%M:%S')}")
+                elif 'what day is it' in query:
+                    print('Saying current day')
+                    self.speak(f"It is {datetime.now().strftime('%A')}")
                 elif command == 'open':
                     open_args = ' '.join(arg)
                     print(f"Opening {open_args}")
