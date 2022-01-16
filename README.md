@@ -53,6 +53,8 @@ It is designed to act as a voice assistant on your computer, capable of performi
 
 
 ## Compatibility
+ONLY COMPATIBLE ON MACOS.
+
 Currently designed and tested for MacOS (12.1) using Python3 (3.9.1).
 
 ## Privacy
