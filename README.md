@@ -26,13 +26,13 @@ It is designed to act as a voice assistant on your computer, capable of performi
     python3 Jarvis.py
 ```
 
-## ToDo
+## To Do
 - [x] Create speech engine
 - [x] Create listener to listen to user voice commands
 - [x] Perform simple information retrieval tasks (i.e. weather, time, location, etc)
-- [ ] Perform non-intrusive tasks on local machine (i.e. open application, play music, etc)
+- [x] Perform non-intrusive tasks on local machine (i.e. open/close application)
 - [ ] Expand database of phrases
-- [ ] Implement Docker (? tbd)
+- [ ] Implement Docker (or create executable package)
 - [ ] Implement a front-end interface (i.e. a synthesizer like hal in 2001: A space odyssey)
 - [ ] Obtain the mind stone to make Jarvis sentient
 
@@ -56,3 +56,5 @@ Currently designed and tested for MacOS (12.1) using Python3 (3.9.1).
 
 ## Privacy
 This program, by default, will utilize your computer's microphone and will listen to audio picked up by your system's micophone. In the script that I have written, no part of the program stores/logs/sends recordings with one exception. Only the latest voice command will be stored in a variable as a string of text to be parsed and run, but once a new command is given, the old command will be overwritten. This utilizes the python packages pyttsx3 and speech_recognition, which to my knowledge, does not store/log data. Feel free to browse the source code to verify :)
+
+Your IP address is utilized for determining your location. It is stored in a local variable when the program is running, and is used in API calls to obtain weather and location information, but no data is sent to the server.
