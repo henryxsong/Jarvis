@@ -88,6 +88,12 @@ class Engine(object):
                     print('Getting weather')
                     location = requests.get(f"https://ipapi.co/{get_ip()}/city/").text
                     self.speak(get_weather(location))
+                elif 'google' in query:
+                    #TODO: needs fixing, or maybe im pronouncing google wrong
+                    print('Searching Google')
+                    search_args = ' '.join(arg)
+                    self.speak(f"Here is what I found for {search_args}")
+                    self.speak(google_it(search_args))
                 
             else:
                 hour = datetime.now().hour
