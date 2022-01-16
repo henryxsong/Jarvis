@@ -32,6 +32,7 @@ It is designed to act as a voice assistant on your computer, capable of performi
     BOTNAME=JARVIS
     WEATHER_API_KEY=YOUR_KEY_HERE
     NEWS_API_KEY=YOUR_KEY_HERE
+```
 
 6. Install dependencies
 ```
