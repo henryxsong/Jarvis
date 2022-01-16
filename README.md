@@ -32,6 +32,7 @@ It is designed to act as a voice assistant on your computer, capable of performi
 - [x] Perform simple information retrieval tasks (i.e. weather, time, location, etc)
 - [x] Perform non-intrusive tasks on local machine (i.e. open/close application)
 - [ ] Expand database of phrases
+- [ ] Expand compatibility with Windows
 - [ ] Implement Docker (or create executable package)
 - [ ] Implement a front-end interface (i.e. a synthesizer like hal in 2001: A space odyssey)
 - [ ] Obtain the mind stone to make Jarvis sentient
