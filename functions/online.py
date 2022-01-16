@@ -31,3 +31,15 @@ def youtube_it(query:str):
     """
     kit.playonyt(query)
 
+def get_weather(query:str) -> str:
+    """
+    Returns the weather for a given location
+    """
+    WEATHER_API_KEY = config('WEATHER_API_KEY')
+    result = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={query}&appid={WEATHER_API_KEY}").json()
+    print(result)
+    condition = result["weather"][0]["description"]
+    temp = result["main"]["temp"]
+    print(condition, temp)
+    return f"The weather in {query} is {condition} with a temperature of {temp} degrees Ferenheit."
+
