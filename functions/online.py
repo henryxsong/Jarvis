@@ -23,7 +23,7 @@ def google_it(query:str):
     """
     Searches Google for a query and returns the first result
     """
-    kit.search(query, option="web")
+    kit.search(query)
 
 def youtube_it(query:str):
     """
@@ -36,7 +36,7 @@ def get_weather(query:str) -> str:
     Returns the weather for a given location
     """
     WEATHER_API_KEY = config('WEATHER_API_KEY')
-    result = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={query}&appid={WEATHER_API_KEY}").json()
+    result = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={query}&appid={WEATHER_API_KEY}&units=imperial").json()
     print(result)
     condition = result["weather"][0]["description"]
     temp = result["main"]["temp"]
@@ -44,6 +44,7 @@ def get_weather(query:str) -> str:
     return f"The weather in {query} is {condition} with a temperature of {temp} degrees Ferenheit."
 
 
+google_it("google")
 print(get_weather("Seattle"))
 youtube_it("rick roll")
 print(get_ip())
