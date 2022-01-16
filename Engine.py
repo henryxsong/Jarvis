@@ -1,10 +1,17 @@
 #class Engine(object):
+from urllib import request
 import pyttsx3
+import requests
 import speech_recognition as sr
 from random import choice
 from decouple import config
 from datetime import datetime
 from phrase_database import performing_task
+
+from functions.ops import Operations
+from functions.online import get_ip, wiki_lookup, google_it, youtube_it, get_weather, get_national_news, get_joke
+
+
 
 USERNAME = config('USER')
 BOTNAME = config('BOTNAME')
@@ -56,9 +63,32 @@ class Engine(object):
         try:
             print('Recognizing...')
             query = r.recognize_google(audio, language='en-us')
+            #self.speak(choice(performing_task))
+
+            parsed_query = query.split()
+            command = parsed_query[0]
+            arg = parsed_query[1:]
+
             if not 'exit' in query or 'stop' in query or 'quit' in query:
-                self.speak(query)
-                self.speak(choice(performing_task))
+                if 'hello' in query or 'hi' in query:
+                    print('Greeting user')
+                    self.speak(f"Hello {USERNAME}")
+                elif 'what is your name' in query:
+                    print('Saying my name')
+                    self.speak(f"I am {BOTNAME}")
+                elif 'what time is it' in query:
+                    print('Saying current time')
+                    self.speak(f"It is {datetime.now().strftime('%H:%M:%S')}")
+                elif command == 'open':
+                    open_args = ' '.join(arg)
+                    print(f"Opening {open_args}")
+                    Operations().open_app(open_args)
+                    print('done')
+                elif 'weather' in query:
+                    print('Getting weather')
+                    location = requests.get(f"https://ipapi.co/{get_ip()}/city/").text
+                    self.speak(get_weather(location))
+                
             else:
                 hour = datetime.now().hour
                 if hour >= 21 and hour < 6:
