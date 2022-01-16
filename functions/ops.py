@@ -1,9 +1,8 @@
 import os
 import subprocess as sp
 import time
-import directory
-import psutil
 
+import psutil
 from directory import Directory
 
 class Operations(object):
@@ -33,5 +32,4 @@ class Operations(object):
                 process.kill()
         except:
             print(f"{app_name} process not open")
-
 
