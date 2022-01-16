@@ -82,6 +82,10 @@ class Engine(object):
                 elif 'what day is it' in query:
                     print('Saying current day')
                     self.speak(f"It is {datetime.now().strftime('%A')}")
+                elif 'where am i' in query or 'what is my location' in query:
+                    print('Saying current location')
+                    location = requests.get(f"https://ipapi.co/{get_ip()}/city/").text
+                    self.speak(f"You are at {location}")
                 elif command == 'open':
                     open_args = ' '.join(arg)
                     print(f"Opening {open_args}")
