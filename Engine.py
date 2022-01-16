@@ -84,6 +84,11 @@ class Engine(object):
                     print(f"Opening {open_args}")
                     Operations().open_app(open_args)
                     print('done')
+                elif command == 'close':
+                    close_args = ' '.join(arg)
+                    print(f"Closing {close_args}")
+                    Operations().close_app(close_args)
+                    print('done')
                 elif 'weather' in query:
                     print('Getting weather')
                     location = requests.get(f"https://ipapi.co/{get_ip()}/city/").text
