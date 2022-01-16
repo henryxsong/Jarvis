@@ -100,6 +100,12 @@ class Engine(object):
                 elif 'news' in query:
                     print('Getting national news')
                     self.speak(get_national_news())
+                elif 'youtube' in query:
+                    #TODO: needs fixing, or maybe im pronouncing youtube wrong
+                    print('Searching YouTube')
+                    search_args = ' '.join(arg)
+                    self.speak(f"Here is what I found for {search_args}")
+                    self.speak(youtube_it(search_args))
                 
             else:
                 hour = datetime.now().hour
