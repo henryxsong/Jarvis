@@ -19,3 +19,9 @@ def wiki_lookup(query:str) -> str:
     """
     return wikipedia.summary(query, sentences=3)
 
+def google_it(query:str):
+    """
+    Searches Google for a query and returns the first result
+    """
+    kit.search(query, option="web")
+
