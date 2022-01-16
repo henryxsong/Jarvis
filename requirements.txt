@@ -1,0 +1,7 @@
+psutil==5.8.0
+python-decouple==3.5
+pyttsx3==2.90
+pywhatkit==5.2
+requests==2.26.0
+SpeechRecognition==3.8.1
+wikipedia==1.4.0
