@@ -40,7 +40,7 @@ class Directory(object):
             full_path = os.path.join(dir, path)
 
             self.add_app_path(self.parse_app_name(path), COMMAND + [full_path])
-        print(self.app_paths)
+        #print(self.app_paths)
 
     
     def get_app_paths(self) -> list:
