@@ -37,12 +37,18 @@ It is designed to act as a voice assistant on your computer, capable of performi
 - [ ] Obtain the mind stone to make Jarvis sentient
 
 ## Dependencies
-- Python 3+
-- PyAudio
-- pyttsx3
-- pywhatkit
-- wikipedia
-- requests
+| Package | Version |
+| ----------- | ----------- |
+| Python | 3.0+ |
+| psutil | 5.8.0 |
+| python-decouple | 3.5 |
+| pyttsx3 | 2.9 |
+| pywhatkit | 5.2 |
+| requests | 2.26.0 |
+| wikipedia | 1.4.0 |
+| PyAudio | n/a |
+| SpeechRecognition | 3.8.1 |
+
 
 
 ## Compatibility
